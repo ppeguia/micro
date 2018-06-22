@@ -88,8 +88,8 @@ public class UsuarioServImpl implements UsuarioServ  {
 			String activo = fijaActivo(usr.getActivo());
 			usrRest.add(new UsuarioBean(String.valueOf(usr.getId()),
 	                usr.getUsuario(),usr.getPassword(),
-	                usr.getIdEmpresa(),
-	                String.valueOf(usr.getActivo())));
+	                empresa,
+	                activo));
 		}
 		return new RespUsrBean("0", "Exitoso:= " + mensaje, usrRest);
 	}
